@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Kumbh Sans', sans-serif;
+  background: #F4F6F8;
+  transition: background-color 0.5s;
+}
+
+h1, h2{
+  font-size: 28px;
+  font-weight: 700;
+  color: #19202D;
+}
+
+.btn{
+  background: #5964E0;
+  border-radius: 5px;
+  padding: 7px 25px;
+  border: none;
+  outline: none; /* Tarayıcı tarafından eklenen kenar çizgisi kaldırmak içindir  */
+  color: #FFF;
+  font-size: 16px;
+}
+
+p{
+  color: #6E8098;
+  font-weight: 400px;
+  font-size: 16px;
+}
+
+.header{
+  width: 100%;
+  height: 150px;
+  line-height: 150px;
+  background: url('./img/header.svg') no-repeat center/cover;
+}
+.header a {
+  text-decoration: none;
+  color: #FFF;
+}
+.header-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .header h1 {
+  color: #FFF;
+} */
+
+.container {
+  max-width: 1140px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin: auto;
+}
+
+.list-wrapper{
+  border-radius: 6px;
+  margin-top: -30px;
+  background: #FFF;
+}
+
+.search-panel{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-filter,
+.search-location,
+.search-checkbox { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 15px 25px;
+  outline: none;
+  flex-grow: 1;  /* elemanları birleştirip aradakii boşluğu kaldırırır. */
+}
+
+.search-filter,
+.search-location {
+  border-right: 0.5px solid #ddd;
+}
+
+.search-filter input,
+.search-location input {
+  border: none;
+  outline: none;
+  color: #19202D;
+  font-size: 16px;
+}
+
+.search-filter input{
+  /* width: 100%;  */
+  /* Input'un genişliğini %100 yaparak container'a tam sığmasını sağlar */
+  box-sizing: border-box; /* Padding ve border'ı içeriğin genişliği içinde tutar */
+  text-overflow: ellipsis; /* Eğer metin çok uzunsa üç nokta ile kırp */
+  white-space: nowrap; /* Metni bir satırda tutar, alt satıra geçmez */
+  overflow: hidden; /* Taşıyan içeriği gizler */
+}
+
+.jobs-wrapper{
+  padding-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+
+.job-item{
+  width: 350px;
+  height: 228px;
+  margin-bottom: 50px;
+  border-radius: 6px;
+  background: #FFF;
+}
+
+.job-item img {
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  margin-left: 20px;
+}
+.job-content{
+  padding: 32px;
+}
+
+.job-content h6{
+  color: #6E8098;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.job-content h1{
+  margin-bottom: 10px;
+}
+.job-content h1 a {
+  text-decoration: none;
+  color: #19202D;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.location p {
+ padding-bottom: 32px;
+ padding-left: 32px;
+}
+
+.location p span {
+  color: #5964E0;
+}
+
+.loadMore{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.detail-wrapper{
+  border-radius: 10px;
+  margin-top: -45px;
+  background: #FFF;
+}
+
+.detail-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.detail-top-btn{
+  padding: 7px 25px;
+  margin: 15px;
+  border: 1px solid #5964e024;
+  border-radius: 5px;
+  background-color: #5964e024;
+}
+.detail-top-btn a{
+  text-decoration: none;
+  color: #5964E0;
+  font-size: 16px;
+}
+
+.detail-top img{
+  width: 140px;
+  height: 140px;
+}
+.about-job{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.about-job h6{
+  font-size: 16px;
+  color: #6E8098;
+  margin-bottom: 10px;
+  font-weight: 400px;
+}
+
+.about-job h1{
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.about-job span{
+  color: #5964E0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.job-desc{
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+
+.requir h1 {
+  margin-bottom: 10px;
+}
+
+.respons h1{
+  margin-top: 50px;
+  margin-bottom: 20px ;
+}
+
+.requir p, .respons p{
+  margin-bottom: 15px;
+  line-height: 26px
+}
+.requir-item, .respons-item{
+  padding-left: 30px;
+}
+.requir-item li, .respons-item li{
+  margin-bottom: 10px;
+  margin-left: 5px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.sun-moon{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container{
+    width: 100%;
+    padding: 0px 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h1,h2{
+    font-size: 20px;
+  }
+
+  .job-item{
+    width: 300px;
+  }
+
+  .search-filter,
+  .search-checkbox input{
+    padding: 7px 20px;
+  }
+
+  .search-location{
+    padding: 5px 20px;
+  }
+
+}
+
+
+@media only screen and (max-width: 576px) {
+  .search-location {
+    display: none;
+  }
+}
+
+
+/* Toggle styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff; 
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #5964E0;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #fff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.dark-mode {
+  background: #121721;
+}
+
+.dark-mode .list-wrapper {
+  background: #19202D;
+  color: #fff; /* İstenilen metin rengi */
+}
+
+.dark-mode .job-item {
+  background: #19202D;
+  color: #fff; /* İstenilen metin rengi */
+}
+
+.dark-mode .search-filter input, .dark-mode .search-location input {
+  background: #19202D;
+
+}
+.dark-mode .job-content h1 a {
+  color: #fff;
+}
