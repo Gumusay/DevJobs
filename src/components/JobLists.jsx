@@ -8,7 +8,9 @@ export default function JobLists() {
   const [showFullTime, setShowFullTime] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [searchLocation, setSearchLocation] = useState('');
-  const [filteredJobs, setFilteredJobs] = useState(jobs);
+  const [filteredJobs, setFilteredJobs] = useState(jobs.slice(0, 6));
+  const [jobsToDisplay, setJobsToDisplay] = useState(5); // Başlangıçta görüntülenecek iş sayısı
+  const [jobsToLoad, setJobsToLoad] = useState(5); // "Daha Fazla Yükle" tıklandığında yüklenecek iş sayısı
 
   const handleCheckboxChange = () => {
     setShowFullTime(!showFullTime);
@@ -31,7 +33,13 @@ export default function JobLists() {
       return true;
     });
 
-    setFilteredJobs(filtered);
+    setFilteredJobs(filtered.slice(0, jobsToDisplay)); // Belirtilen iş sayısını göster
+  };
+
+  const handleLoadMore = () => {
+    const newJobsToDisplay = jobsToDisplay + jobsToLoad;
+    setJobsToDisplay(newJobsToDisplay);
+    setFilteredJobs(jobs.slice(0, newJobsToDisplay));
   };
 
   return (
@@ -100,7 +108,7 @@ export default function JobLists() {
           </div>
 
           <div className="loadMore">
-            <button className="btn">Load More</button>
+            <button className="btn" onClick={handleLoadMore}>Load More</button>
           </div>
         </div>
       </div>
