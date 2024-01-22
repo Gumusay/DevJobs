@@ -1,5 +1,5 @@
-import SearchIcon from '../img/search-icon.svg';
-import MapIcon from '../img/map-icon.svg';
+import SearchIcon from '../../public/img/search-icon.svg';
+import MapIcon from '../../public/img/map-icon.svg';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import jobs from '../components/data.json';

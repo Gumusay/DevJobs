@@ -1,7 +1,7 @@
 import React from 'react'
-import Switch from "../darkMod/Switch"
-import SunIcon from '../img/sun.png'
-import MoonIcon from '../img/moon.png'
+import Switch from "../darkMod/Switch.jsx"
+import SunIcon from '../../public/img/sun.png'
+import MoonIcon from '../../public/img/moon.png'
 import { Link } from 'react-router-dom'
 export default function Header() {
     return(
