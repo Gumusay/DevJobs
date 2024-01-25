@@ -108,7 +108,7 @@ export default function JobLists() {
           </div>
 
           <div className="loadMore">
-            <button className="btn" onClick={handleLoadMore}>Load More</button>
+            <button className="btn" onClick={handleLoadMore}>Daha Fazla Yükle</button>
           </div>
         </div>
       </div>

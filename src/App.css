@@ -25,6 +25,7 @@ h1, h2{
   outline: none; /* Tarayıcı tarafından eklenen kenar çizgisi kaldırmak içindir  */
   color: #FFF;
   font-size: 16px;
+  cursor: pointer;
 }
 
 p{
@@ -47,6 +48,30 @@ p{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.footer{
+  margin-top: 30px;
+  position: sticky;
+  width: 100%;
+  height: 100px;
+  background-color: #FFF;
+}
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1140px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin: auto;
+  height: 100px;
+}
+
+li{
+  color: #6E8098;
+}
+li::marker{
+ color: #5964E0;
 }
 /* .header h1 {
   color: #FFF;
@@ -165,17 +190,27 @@ p{
 }
 
 .detail-wrapper{
-  border-radius: 10px;
+  border-radius: 6px;
   margin-top: -45px;
   background: #FFF;
 }
-
+.detail-top h1, .detail-top h4 {
+  margin: 0;
+  margin-left: -350px; 
+}
+.detail-top h4{
+  color: #6E8098;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 400;
+}
 .detail-top{
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
 }
+
 .detail-top-btn{
   padding: 7px 25px;
   margin: 15px;
@@ -249,6 +284,12 @@ p{
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.job-detail{
+  background-color: #FFF;
+  padding: 50px;
+  border-radius: 6px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -350,4 +391,23 @@ input:checked + .slider:before {
 }
 .dark-mode .job-content h1 a {
   color: #fff;
+}
+
+.dark-mode .job-detail{
+  background: #19202D;
+  color: #fff; 
+}
+.dark-mode .detail-wrapper{
+  background: #19202D;
+  color: #fff; 
+}
+.dark-mode .footer{
+  background: #19202D;
+  color: #fff; 
+}
+.dark-mode .job-detail h1{
+  color: #fff; 
+}
+.dark-mode .detail-top h1{
+  color: #fff; 
 }

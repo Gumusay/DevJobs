@@ -6,16 +6,18 @@ export default function JobDetails() {
     const { position } = useParams();
     const job = jobs.find (job => job.position === position)
     return(
-       <div className='container'>
+        <>
+            <div className='container'>
             <div className="detail-wrapper">
                 <div className="detail-top">
                     <img src = {job.logo} alt="logo" />
                     <div>
                         <h1>{job.company}</h1>
+                        <h4>{job.company}.com</h4>
                     </div>
 
                     <button className='detail-top-btn'>
-                        <Link to={job.website}>Company Site</Link>
+                        <Link to={job.website}>Şirket Sitesi</Link>
                     </button>
                 </div>
             </div>
@@ -28,7 +30,7 @@ export default function JobDetails() {
                         <h1>{job.position}</h1>
                         <span>{job.location}</span>
                     </div>
-                    <button className='btn'>Apply Now</button>
+                    <button className='btn'>Şimdi Başvur</button>
                 </div>
                 <p className='job-desc'>{job.description}</p>
 
@@ -53,7 +55,20 @@ export default function JobDetails() {
                 </div>
 
             </div>
-
        </div>
+       
+       <div className='footer'>
+        <div className='footer-content'>
+            <div className='footer-text'>
+                    <h4>{job.position}</h4>
+                    <p>So Digital Inc.</p>
+                </div>
+                <div className='footer-btn'>
+                    <button className='btn'>Şimdi Başvur</button>           
+                </div>
+            </div>
+       </div>
+        </>
+       
     )
 }
