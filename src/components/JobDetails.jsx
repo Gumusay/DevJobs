@@ -10,10 +10,12 @@ export default function JobDetails() {
             <div className='container'>
             <div className="detail-wrapper">
                 <div className="detail-top">
-                    <img src = {job.logo} alt="logo" />
-                    <div>
-                        <h1>{job.company}</h1>
-                        <h4>{job.company}.com</h4>
+                    <div className='detail-top-l'>
+                        <img src = {job.logo} alt="logo" />
+                        <div className='detail-top-text'>
+                            <h1>{job.company}</h1>
+                            <h4>{job.company}.com</h4>
+                        </div>
                     </div>
 
                     <button className='detail-top-btn'>
@@ -25,7 +27,7 @@ export default function JobDetails() {
         
             <div className="job-detail">
                 <div className="about-job">
-                    <div>
+                    <div className='about-job-detail'>
                         <h6>{job.postedAt} . {job.contract}</h6>
                         <h1>{job.position}</h1>
                         <span>{job.location}</span>
